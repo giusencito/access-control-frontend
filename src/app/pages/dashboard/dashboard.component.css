@@ -1,0 +1,74 @@
+table{
+    width: 100%;
+    margin-top: 20px;
+}
+td, th {
+    width: 25%;
+   
+  }
+
+
+.button{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 50%;
+}
+.button2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.formselect{
+    width: 100%;
+}
+.input{
+    width: 100%;
+}
+.mat-column-id {
+
+
+width: 5%;
+
+ 
+}
+.mat-column-state {
+
+
+    width: 15%;
+    
+     
+    }
+    .mat-column-username {
+
+
+        width:15%;
+        
+         
+        }
+        .mat-column-name {
+
+
+            width:15%;
+            
+             
+            }
+.header{
+    text-align: center;
+}
+.create{
+    display: flex;
+    justify-content: center;
+}
+.search{
+    display: flex;
+    justify-content: center;
+}
+mat-card{
+    width: 70%;
+}
+h1{
+    text-align: center;
+}
+.bar{
+    width: 100%;
+}

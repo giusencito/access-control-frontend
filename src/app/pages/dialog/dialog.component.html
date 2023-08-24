@@ -1,0 +1,6 @@
+<h2  *ngIf="type=='registercorrect'">Se creo el administrador</h2>
+<h2  *ngIf="type=='errorregister'">No se creo el administrador</h2>
+<h2 *ngIf="type=='errorlogin'">Datos incorrectos</h2>
+<h2 *ngIf="type=='noadmin'">No es administrador</h2>
+
+<button color="primary" mat-raised-button (click)="close()">Aceptar</button>

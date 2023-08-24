@@ -1,0 +1,26 @@
+
+<div class="background">
+<form [formGroup]="registerform">
+<mat-card class="card">
+    <mat-form-field class="input" appearance="outline">
+        <input matInput placeholder="Usuario"  [(ngModel)]="Register.username" formControlName="username" />
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-error  align="start" *ngIf="registerform.controls['username'].dirty && registerform.hasError('required','username')">Es requerido</mat-error>
+    </mat-form-field>
+    <mat-form-field class="input" appearance="outline">
+        <input matInput type="password" placeholder="Contraseña" [(ngModel)]="Register.password" formControlName="password"/>
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-error  align="start" *ngIf="registerform.controls['password'].dirty && registerform.hasError('required','password')">Es requerido</mat-error>
+    </mat-form-field>
+    <div class="link">
+        <a routerLink="/">Login</a>
+        </div>
+    <button mat-raised-button color="primary" [disabled]="!(registerform.valid)" class="button" (click)="register()">Registrar</button>
+
+
+
+
+    
+</mat-card>
+</form>
+</div>

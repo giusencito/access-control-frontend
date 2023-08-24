@@ -1,0 +1,40 @@
+
+<form [formGroup]="editform">
+
+  <mat-form-field class="input" appearance="outline">
+    <input matInput placeholder="Usuario"   formControlName="username"  [(ngModel)]="Person.username" />
+    <mat-icon matSuffix>person</mat-icon>
+    <mat-error  align="start" *ngIf="editform.controls['username'].dirty && editform.hasError('required','username')">Es requerido</mat-error>
+  </mat-form-field>
+  <mat-form-field class="input" appearance="outline">
+    <input matInput placeholder="Nombre"   formControlName="name"  [(ngModel)]="Person.name" />
+    <mat-icon matSuffix>person</mat-icon>
+    <mat-error  align="start" *ngIf="editform.controls['name'].dirty && editform.hasError('required','name')">Es requerido</mat-error>
+  </mat-form-field>
+
+<mat-form-field class="input" appearance="outline">
+  <input matInput type="password" placeholder="Contraseña"  formControlName="password"  [(ngModel)]="Person.password"/>
+  <mat-icon matSuffix>lock</mat-icon>
+  <mat-error  align="start" *ngIf="editform.controls['password'].dirty && editform.hasError('required','password')">Es requerido</mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field class="input" appearance="outline">
+    <mat-label>Estado</mat-label>
+        <mat-select [(ngModel)]="Person.state" name="state" formControlName="state">
+            <mat-option *ngFor="let state of states" [value]="state">
+              {{state}}
+            </mat-option>
+          </mat-select>
+  </mat-form-field>
+
+
+  <button mat-raised-button class="button" color="primary" [disabled]="!(editform.valid)" [mat-dialog-close]="Person">Editar Usuario</button>
+
+
+
+
+
+
+
+</form>
