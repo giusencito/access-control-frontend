@@ -37,7 +37,6 @@ export class DialogEditComponent implements OnInit {
       this.editform.controls['username'].setValue(this.data.person.username)
 
       this.editform.controls['name'].setValue(this.data.person.name)
-     this.editform.controls['password'].setValue(this.data.person.password)
      this.editform.controls['state'].setValue(this.data.state)
 
     })
